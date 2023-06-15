@@ -1,0 +1,604 @@
+/* party */
+.item1-party { grid-area: header; 
+}
+
+.top-bar-flex-party{
+    display:flex;
+}
+
+.dinner-party-inverted {
+ font-size: 12px;
+ color:white!important;
+ background-image:linear-gradient(rgba(221,161,12,255), rgba(159,17,60,255));
+}
+
+.pitt-party-inverted {
+font-size: 12px;
+color:white!important;
+background-image:linear-gradient(rgba(254,193,14,255), black);
+}
+.celebrity-party-inverted {
+font-size: 12px;
+color:white!important;
+background-image:linear-gradient(violet, blueviolet);
+}
+
+
+.item2-party { grid-area: menu; 
+     }
+.item3-party {grid-area: main;
+overflow: auto;
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
+background-color:rgba(18,18,18,255)}
+.item4-party { grid-area: chat; 
+overflow: auto; 
+background-color:black;
+} 
+.item5-party { grid-area: footer; 
+     }
+
+
+
+.grid-container-party {
+display: grid;
+height: 745px;
+grid-template-columns: 188.63px auto 400px;
+grid-template-rows: 61px 600px  49px;
+grid-template-areas:
+
+'menu header chat'
+'menu main chat'
+'footer footer footer';
+}
+
+.item4::-webkit-scrollbar {
+display: none;
+}
+
+.item3::-webkit-scrollbar {
+display: none;
+}
+
+.item4-party::-webkit-scrollbar {
+display: none;
+}
+
+.item3-party::-webkit-scrollbar {
+display: none;
+}
+
+.change{
+background-color: aqua;
+}
+
+.screen-UI-chat{
+    height:30px;
+    width:auto;
+    margin-left: 275.3px;
+    margin-bottom:-15px;
+    position:relative;
+    z-index: -1;
+}
+
+.screen-UI{
+    display:none;
+}
+
+
+.party-box{
+width: 100%;
+height: 230px;
+background-image:linear-gradient(rgba(221,161,12,255), rgba(159,17,60,255));
+}
+
+.party-header{
+display:flex;
+padding-top:30px;
+align-items:flex-end;
+gap:20px;
+}
+
+
+.add-song{
+    background:transparent;
+    border: 0.5px solid white;
+    font-size:20px;
+    border-radius:50px;
+    height:30px;
+    width:60px;
+    color:white;
+    font-weight:bold;
+    margin-left:-15px;
+}
+
+.search-song{
+    height:16px;
+    width:16px;
+}
+
+.header-title{
+    width:80%;
+    font-size:20px;
+    font-weight:bolder;
+    align-self:center;
+    color:transparent;
+}
+
+.party-info{
+    display:flex;
+    flex-direction:column;
+    gap: 10px;
+    width:100%;
+    text-align:left;
+    color:white;
+}
+
+
+.party-img{
+margin-left: 20px;
+width:180px;
+height:180px;
+}
+
+.party-members{
+display:flex;
+gap:20px;
+}
+
+.party-member{ 
+display:flex;
+flex-direction:row;
+align-items:center;
+gap:10px;
+font-size:16px;
+}
+
+.party-small{
+    font-size:12px;
+}
+
+.content-party{
+margin-bottom:50px;
+height:1250px;
+color:#a9a9a9;
+background-color:rgba(18,18,18,255);
+}
+
+.queue-header{
+display:flex;
+align-items: center;
+font-size:25px;
+color:white;
+font-weight:bolder;
+justify-content: space-between;
+}
+
+
+
+.music-header{
+display:flex;
+color:#a9a9a9;
+align-items: center;
+font-size:13px;
+}
+
+.number{
+text-align: center;
+width:20px;
+margin-right:6px;
+}
+
+.title-header{
+width:35%;
+}
+
+.album-header{
+width:30%; 
+
+}
+
+.who-added-header{
+width: 27% 
+}
+
+.time{
+width:16px;
+height:16px;
+
+}
+
+.header-line{
+height: 0.1px;
+background: gray;
+width:102%;
+border:0;
+margin-top:-5px;
+}
+
+.header-line{
+height: 0.1px;
+background: gray;
+width:102%;
+border:0;
+margin-top:-5px;
+}
+
+.music{
+display:flex;
+flex-direction:column;
+color:#a9a9a9;
+font-size:14px;
+margin-left:25px;
+margin-right:50px;
+}
+
+.no-chat{
+    gap:100px;
+}
+
+.upvoted{
+    background-color: #3D3D3D;
+}
+
+.queue-section{
+display:flex;
+flex-direction: column;
+width:100%;
+gap:15px;
+margin-bottom:10px;
+text-align:left;
+}
+
+.see-all{
+    width:fit-content;
+    font-weight:bold;
+}
+
+.queue-section-title{
+    width:fit-content;
+    font-weight:bold;
+}
+
+.queue-section-header{
+font-size:14px;
+display:flex;
+align-items: center;
+justify-content:space-between;
+}
+
+.song{
+display:flex;
+align-items:center;
+text-align:left;
+}
+
+.song-title{
+    display:flex;
+    align-items:center;
+    text-align:left;
+    width:35%;
+    }
+
+
+.song-img{
+width:40px;
+height:40px;
+margin-right:14px;
+}
+
+.song-info{
+display:flex;
+flex-direction: column;
+gap:5px;
+width:100%;
+color:white
+}
+
+.artist{
+width:100%;
+}
+
+
+.album{
+width:30%
+}
+
+.song-time{
+    width:4px;
+}
+
+.who-added{
+height:20px;
+}
+
+.who-added-flex{
+display:flex;
+width:26%;
+}
+
+.chat{
+display:flex;
+flex-direction:column;
+margin-top:90px;
+margin-left:20px;
+gap:20px;
+margin-bottom:100px;
+}
+
+.chat-top-box{
+position:fixed;
+width: 400px;  
+height:61px;
+background-color: black; 
+}
+
+.chat-title{
+display:flex;
+align-items:center;
+gap:310px;
+padding-left:20px;
+font-size:16px;
+color:#a9a9a9;
+font-weight:bolder;
+}
+
+.chevron{
+width:18px;
+height:18px;
+opacity:80%
+}
+
+.message{
+display:flex;
+align-items:end;
+height:fit-content;
+color: white;
+gap:10px;
+}
+
+.text-box{
+width: fit-content;
+height:fit-content;
+background-color:#3D3D3D;
+border-radius: 50px;
+color:white;
+padding:15px;
+margin-right:20px;
+}
+
+.queued-chat{
+display:flex;
+align-items: center;
+height:fit-content;
+color:black;
+gap:20px;
+margin-right:20px;
+}
+
+
+
+.queued-chat-name {
+font-weight:bold;
+color:white;
+}
+
+.queued-chat-song{
+color:white;
+font-style:italic;
+font-weight:lighter;
+}
+
+.prompt{
+width: fit-content;
+height:fit-content;
+background-color:rgba(159,20,61,255);
+border-radius: 30px;
+color:white;
+padding:15px;
+padding-left:20px;
+margin-right:20px; 
+}
+.prompt-img{
+width:20px;
+height:20px;
+margin-bottom:5px;
+}
+
+.prompt.text{
+font-style:italic;
+}
+
+.prompt-header{
+display:flex;
+gap:10px;
+font-weight:bold;
+}
+
+.prompt-line {
+border-left: solid rgba(159,20,61,255);
+margin-left:30px;
+}
+
+.pitt-prompt-line {
+border-left: solid goldenrod;
+margin-left:30px;
+}
+
+.celeb-prompt-line {
+    border-left: solid darkviolet;
+    margin-left:30px;
+}
+
+.prompt-responses{
+display:flex;
+flex-direction:column;
+gap:10px;
+margin-left:20px;
+margin-right:20px;
+}
+
+.prompt-reply{
+    opacity:40%;
+}
+
+
+.chat-profile{
+width: calc(10px + 10px);
+height: calc(10px + 10px);
+margin-bottom:5px;
+}
+
+.send-message{
+display:flex;
+flex-direction: row;
+margin-top:calc(100vh - 153px);
+align-items: center;
+position:fixed;
+gap:20px;
+padding-bottom:10px;
+padding-top:10px;
+background-color:black;
+}
+
+
+.type-box{
+width: 250px;
+height:20px;
+margin-left:20px;
+border-radius: 50px;
+padding:10px;
+border: 1px solid gray;;
+color:#a9a9a9;
+background-color:transparent;
+}
+
+.chat-controls{
+width:70px;
+opacity:80%;
+}
+
+/* No Chat */
+/* party */
+
+.content-party-no-chat{
+margin-bottom:100px;
+}
+
+
+.party-members{
+display:flex;
+gap:20px;
+font-size:20px;
+
+}
+
+
+.song-number{
+text-align: center;
+width:20px;
+margin-right:15px;
+}
+
+.number{
+    text-align: center;
+    margin-right:15px;
+    width:20px;
+    }
+
+.artist{
+color:#a9a9a9;
+width:100%
+}
+
+
+
+.chat-preview{
+position:fixed;
+display:none;
+width: 400px;  
+height:30px;
+margin-left:calc(100% - 400px);
+margin-top:calc(100vh - 147px);
+background-color: black;
+padding-top:20px;
+padding-bottom:10px;
+}
+
+.chevron-no-chat{
+width:20px;
+height:20px;
+-webkit-transform: scaleY(-1);
+transform: scaleY(-1);
+}
+
+/* celebrity */
+
+.celebrity-party-box{
+width: 100%;
+height: 230px;
+background-image:linear-gradient(violet, blueviolet);
+
+}
+
+
+.celebrity-prompt{
+width: fit-content;
+height:fit-content;
+background-color:darkviolet;
+border-radius: 30px;
+color:white;
+padding:15px;
+padding-left:20px;
+margin-right:20px; 
+}
+
+/* public */
+
+
+.pitt-party-box{
+width: 100%;
+height: 230px;
+background-image:linear-gradient(rgba(254,193,14,255), #0d0d0d)
+}
+
+.pitt-prompt{
+width: fit-content;
+height:fit-content;
+background-color:goldenrod;
+border-radius: 30px;
+color:white;
+padding:15px;
+padding-left:20px;
+margin-right:20px; 
+}
+
+/* dropdown */
+
+.dropdown{
+    display:flex;
+    flex-direction:column;
+}
+
+.dropdown-options {
+display:flex;
+flex-direction:column;
+background-color: #3D3D3D;
+width:150px;
+height:fit-content;
+position:sticky;
+padding-bottom:10px;
+display:none;
+margin-bottom:-70px;
+}
+
+.dropdown-option{
+margin-left:10px;
+margin-top:10px;
+color:white;
+}
+
+
+
+
+

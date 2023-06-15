@@ -1,0 +1,196 @@
+body{
+    background-color: rgba(18,18,18,255);
+    font-family:Arial, Helvetica, sans-serif;
+    margin:0;
+}
+
+a{
+    text-decoration:none;
+}
+
+.menu{
+    height: 670px;
+    width:100%;
+}
+
+.top-bar-flex{
+    display:flex;
+    gap:68.5%
+}
+
+    .toggles{
+        display:flex;
+        gap:5px;
+        margin-right:10px;
+        margin-top:10px;
+        margin-left:10px;
+    }
+
+    .toggle{
+        width:auto;
+        height:50px;
+    }
+
+.top-bar-right-flex{
+    display:flex;
+    gap:25px;
+}
+
+    .account{
+        height:50px;
+        width:auto;
+        margin-top:10px;
+    }
+
+    .screen-UI{
+        height:30px;
+        width:auto;
+    }
+
+   
+.song-playing{
+    height:auto;
+    width:100%;
+    margin-top:-7px;
+}
+
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 {grid-area: main;
+        overflow: auto;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+        background-color:rgba(18,18,18,255);
+        overflow-x: hidden;
+        }
+      
+.item4 { grid-area: footer; 
+      }
+
+      body.modal-open {
+        overflow: hidden;
+    }
+
+
+
+.grid-container {
+    display: grid;
+    height:740px;
+    grid-template-columns: 188.63px auto;
+    grid-template-rows: 61px 600px 49px;
+    grid-template-areas:
+
+        'menu header'
+        'menu main'
+        'footer footer';
+}
+
+.item3-home::-webkit-scrollbar {
+    display: none;
+}
+
+.item3::-webkit-scrollbar {
+    display: none;
+}
+
+
+.section{
+    display: flex;
+    flex-direction:column;
+    margin-left:25px;
+}
+
+.clickable-parties{
+    display:flex;
+    gap:20px;
+}
+    .party-entries{
+        display:flex;
+        gap:20px;
+    }
+
+.show-all{
+    width:75px;
+}
+
+
+
+.section-entry{
+    display: flex;
+    flex-direction: column;
+    width:145px;
+    background-color: rgba(24,24,24,255);
+    padding:10px;
+    border-radius:5px;
+}
+
+
+.selected {
+    background-color:#7a7979;
+}
+
+
+ .hovered{
+   background-color: rgba(39,39,39,255);
+} 
+
+
+.section-info-title{
+    color:white;
+    font-size:12px;
+    margin-bottom:-5px;
+    margin-top:7px;
+    font-weight:bold;
+}
+
+.section-info-description{
+    color:gray;
+    font-size:11px;
+}
+
+.section-img{
+    height:100%;
+    outline: 1px solid  rgba(39,39,39,255);;
+    outline-offset: -1px;
+    border-radius:5px;
+}
+
+
+.party-title{
+    font-size:65px;
+    font-weight:bold;
+    color:white;
+}
+
+
+.host{ 
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    gap:10px;
+}
+
+.host-img{
+    width:30px;
+    height:30px;
+}
+
+.host-text{
+    color:gainsboro;
+}
+
+
+.action{
+    width:30px;
+    height:30px;
+    opacity:80%;
+    }
+    
+    .actions{
+    display:flex;
+    gap:20px;
+    padding-top:20px;
+    padding-left:20px;
+    }
+          
+ 
