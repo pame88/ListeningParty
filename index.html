@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+
+
+  <head>
+    <title>Spotify</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css\home.css">
+    <link rel="stylesheet" href="css\style.css">
+    <script defer src="js/home.js"></script>
+  </head>
+
+
+  <body>
+
+      <div class="grid-container">
+
+        <div class="item1">
+          <div class="top-bar-flex-home">
+            <div class=" top-bar-flex-home-left">
+              <div class="toggles">
+                <img class="toggle" style="-webkit-transform: scaleX(-1); transform: scaleX(-1);" src="Images-Home/unhilightedToggle.png">
+                <img class="toggle" src="Images-Home/unhilightedToggle.png">
+              </div>
+              <div>
+                <img class="libraries" src="Images-Home/libraries.png">
+              </div>
+            </div>
+
+            <div class="top-bar-right-flex">
+              <div>
+                <img class="account" src="Images-Home/controls (3).png">
+              </div>
+              <div>
+                <img class="screen-UI" src="Images-Home/screenUI.JPG">
+              </div>
+            </div>
+          </div>
+        </div>
+     
+      <div class="item2">
+        <img class= "menu" src="Images-Home/SpotifyMenu.JPG">
+      </div>
+      
+      <div class="item3">
+        <div class="content-home">
+    
+         
+          <div class = "section">
+            
+            <div class= "home-section-header">
+              <p>Your listening parties</p>
+            </div>
+
+            <div class="clickable-entries">
+
+              <a href="./NewParty.html">
+                <div class="section-entry"  onmouseover="partyHovered(this)" onmouseout="partyHovered(this)">
+                  <img class = "section-img" src ="Images-Home/CreateNewParty.jpg">
+                  <p class="section-info-title">New Party</p>
+                  <p class="section-info-description">Start a new party</p>
+                </div>
+              </a>
+
+              <!-- <a href="./Party.html">
+                <div class="section-entry"  onmouseover="partyHovered(this)" onmouseout="partyHovered(this)">
+                  <img class = "section-img" src ="Images-Party/PartyCover.jpg">
+                    <p class="section-info-title">Dinner</p>
+                    <p class="section-info-description">You + 4 others</p>
+                    <img class = "live-party" src = "Images-Home/liveParty.png">
+                </div>
+              </a> -->
+
+              <a href = "./ActivateParty.html">
+                <div class="section-entry" onclick="themeSelected(this)" onmouseover="partyHovered(this)" onmouseout="partyHovered(this)">
+                  <img class = "section-img" src ="Images-Home/BingoNight.png">
+                  <p class="section-info-title">Bingo Night</p>
+                  <p class="section-info-description">You + 10 others</p>
+                </div>
+              </a>
+
+              <div class="entries" id ="yours">
+          
+                <template id="party-entry">
+                  <div class="section-entry" onclick="themeSelected(this)" onmouseover="partyHovered(this)" onmouseout="partyHovered(this)">
+                    <img class = "section-img" src ="">
+                    <p class="section-info-title"></p>
+                    <p class="section-info-description"></p>
+                  </div>
+              </template>
+
+              </div>
+
+            </div>
+
+          </div>
+        
+    
+          <div class="section">
+            
+            <div class="home-section-header">
+              <p>Listening parties for you</p>
+            </div>
+
+            <div class="clickable-entries">
+
+            <a href="./PublicParty.html" >
+              <div class="section-entry" onmouseover="partyHovered(this)" onmouseout="partyHovered(this)">
+                <img class = "section-img" src ="Images-Home/Pitt.jpg">
+                <p class="section-info-title">Pittsburgh DIY</p>
+                <p class="section-info-description">MrPGH + 93 others</p>
+              </div>
+
+              <a href="./Party.html" >
+                <div class="section-entry" onmouseover="partyHovered(this)" onmouseout="partyHovered(this)">
+                  <img class = "section-img" src ="Images-Party/DinnerParty.jpg">
+                  <p class="section-info-title">Dinner Party</p>
+                  <p class="section-info-description">Ahmed + 3 others</p>
+                </div>
+              </a>
+            </a>
+            
+            <div class="entries" id="for-you"></div>
+
+            </div>
+          </div>
+      
+       
+          <div class = "section" >
+            
+            <div class= "home-section-header">
+              <p>Popular Listening Parties</p>
+              <a href ="./ShowAllParties.html">
+                <img class="show-all" src="Images-Home/ShowAll.png">
+              </a>
+            </div>
+
+            <div class="clickable-entries">
+
+              <a href="CelebrityParty.html">
+                <div class="section-entry" onmouseover="partyHovered(this)" onmouseout="partyHovered(this)">
+                  <img class = "section-img" src ="Images-Home/SaturdayNite.jpg">
+                  <p class="section-info-title">Saturday Nite</p>
+                  <p class="section-info-description">DJMike + 320 others</p>
+                </div>
+              </a> 
+
+              <div class="entries" id="popular"></div>
+
+
+            </div>
+          </div>
+      
+      
+        </div>
+      </div>  
+ 
+
+      <div class="item4">
+        <img class="song-playing" src="Images-Home/SpotifySong.JPG">
+      </div>
+
+    </div>
+   
+
+  
+</html>

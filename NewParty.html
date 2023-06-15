@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<meta charset="UTF-8">
+
+  <head>
+    <title>Spotify</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/newParty.css">
+    <script defer src="js/NewParty.js"></script>
+  </head>
+
+  <body>
+
+    <div class="grid-container">
+
+      <div class="item1">
+        <div class="top-bar-flex">
+          <div class="toggles">
+            <a href = "./index.html">
+                <img class="toggle" src="Images-Home/highlightedToggle.png">
+            </a>
+                <img class="toggle" src="Images-Home/unhilightedToggle.png">
+          </div>
+          
+          <div class="top-bar-right-flex">
+            <div>
+              <img class="account" src="Images-Home/controls (3).png">
+            </div>
+            <div>
+              <img class="screen-UI" src="Images-Home/screenUI.JPG">
+            </div>
+          </div>
+        </div>
+      </div>
+     
+      <div class="item2">
+        <img class= "menu" src="Images-Home/SpotifyMenu.JPG">
+      </div>
+
+      <div class="item3">
+        <div class="new-party-box">
+
+          <div class="create-party-header">
+            <img class="new-party-img" src="Images-NewParty/NewParty.png" onmouseover="partyImgHover(this)" onmouseout="partyImgHoverOut(this)">
+    
+            <div class="party-info">
+    
+              <div class="party-small">LISTENING PARTY</div>
+              <div class="party-title" id="editDetailsBtn">New Party</div>
+              <button class="create-party-button"> Create Party</button>
+  
+              </div>
+            </div>
+          </div> 
+        
+    
+        <div class="content-new-party">
+    
+          <div class="theme-section-header">
+            <div class="theme-section-header-left">
+              <p>Choose a theme</p>
+              <p class="optional">(optional)</p>
+            </div>
+            <div>
+              <img class="show-all" src="Images-Home/ShowAll.png">
+            </div>
+          </div>
+
+          <div id="createThemeModal" class="theme-entry-box">
+
+            <div class="theme-entry-content">
+              <div class="theme-entry-header">
+                <div class="theme-section-header">Create a Theme</div>
+                <img class="close-modal" src="Images-NewParty/close.png">
+              </div>
+
+              <div class="new-theme-info">
+                <img class="new-theme-img" src="Images-NewParty/NewParty.png">
+                <div class="entry-boxes">
+                  <div>
+                    <input class = "entry-box" type="text" id="Name" name="Name" placeholder="Theme name">
+                  </div> 
+                  <div>
+                    <input class ="entry-box description-entry-box" type="text" id="Description" name="Name" placeholder="Theme Description">
+                  </div>
+                </div>
+              </div>
+
+              <div class="theme-entry-footer">
+                <div class="disclaimer">By proceeding, you agree to give Spotify access to the image you choose to upload.Please make sure you have the right to upload the image.</div>
+                <button class="create-theme-button " onclick="createTheme()">Save</button>
+                </div>
+              </div>
+          
+            </div>
+
+          
+            <div id="editDetailsModal" class="theme-entry-box">
+
+              <div class="theme-entry-content">
+                <div class="theme-entry-header">
+                  <div class="theme-section-header">Edit Details</div>
+                  <img class="close-edit-modal" src="Images-NewParty/close.png">
+                </div>
+  
+                <div class="new-theme-info">
+                  <img class="new-theme-img" src="Images-NewParty/NewParty.png">
+                  <div class="entry-boxes">
+                    <div>
+                      <input class = "entry-box" type="text" id="partyName" name="Name" placeholder="Party Name">
+                    </div> 
+                    <div>
+                      <input class ="entry-box description-entry-box" type="text" id="Name" name="Name" placeholder="Add a Description">
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="theme-entry-footer">
+                  <div class="disclaimer">By proceeding, you agree to give Spotify access to the image you choose to upload.Please make sure you have the right to upload the image.</div>
+                  <button class="create-theme-button " onclick="createPartyInfo()">Save</button>
+                  </div>
+                </div>
+            
+            </div>
+            
+          
+          <div class="themes">
+ 
+            <div class="section-entry" id="createThemeBtn"  onmouseover="themeHovered(this)" onmouseout="themeHoveredRemove(this)">
+              <img src ="Images-NewParty/NewTheme.jpg" class = "section-img">
+              <div class="theme-info-title">Create a Theme</div>
+            </div> 
+
+            <div class = "theme-section">
+
+                <template id="theme-entry">
+                  <div class="section-entry" onclick="themeSelected(this)" onmouseover="themeHovered(this)" onmouseout="themeHoveredRemove(this)">
+                    <img src ="" class = "section-img" >
+                    <div class="theme-info-title"></div>
+                  </div>
+                </template>
+                
+            </div>
+          </div>
+          
+    
+          <div class="quick-invite-header">
+            <p>Quick Invite</p>
+            <img class="show-all" src="Images-Home/ShowAll.png">
+          </div>
+    
+          <div class = "theme-section">
+            <div class="quick-invite">
+              <div><img class="quick-invite-img" src="Images-Party/Ahmed.png" ></div>
+              <div class="quick-invite-name">Ahmed</div>
+                <div class="quick-invite-info">
+                  <div class="quick-invite-subtitle">Profile</div>
+                  <button class="quick-invite-plus" onclick="invited(this)">+</button>
+                </div>
+            </div>
+
+            <div class="quick-invite">
+              <div><img class="quick-invite-img" src="Images-NewParty/Tim.png" ></div>
+              <div class="quick-invite-name">Tim</div>
+                <div class="quick-invite-info">
+                  <div class="quick-invite-subtitle">Profile</div>
+                  <div class="quick-invite-plus" onclick="invited(this)">+</div>
+                </div>
+            </div>
+
+            <div class="quick-invite">
+              <div><img class="quick-invite-img" src="Images-NewParty/Amelia.png" ></div>
+              <div class="quick-invite-name">Amelia</div>
+                <div class="quick-invite-info">
+                  <div class="quick-invite-subtitle">Profile</div>
+                  <div class="quick-invite-plus" onclick="invited(this)">+</div>
+                </div>
+            </div>
+
+            <div class="quick-invite">
+              <div><img class="quick-invite-img" src="Images-NewParty/Francesca.png" ></div>
+              <div class="quick-invite-name">Francesca</div>
+                <div class="quick-invite-info">
+                  <div class="quick-invite-subtitle">Profile</div>
+                  <div class="quick-invite-plus" onclick="invited(this)">+</div>
+                </div>
+            </div>
+
+            <div class="quick-invite">
+              <div><img class="quick-invite-img" src="Images-Party/Danielle.png" ></div>
+              <div class="quick-invite-name">Danielle</div>
+                <div class="quick-invite-info">
+                  <div class="quick-invite-subtitle">Profile</div>
+                  <div class="quick-invite-plus" onclick="invited(this)">+</div>
+                </div>
+            </div>
+
+            <div class="quick-invite">
+              <div><img class="quick-invite-img" src="Images-Party/jason.png" ></div>
+              <div class="quick-invite-name">Jason</div>
+                <div class="quick-invite-info">
+                  <div class="quick-invite-subtitle">Profile</div>
+                  <div class="quick-invite-plus" onclick="invited(this)">+</div>
+                </div>
+            </div>
+
+            <div class="quick-invite">
+              <div><img class="quick-invite-img" src="Images-NewParty/Matt.png" ></div>
+              <div class="quick-invite-name">Matt</div>
+                <div class="quick-invite-info">
+                  <div class="quick-invite-subtitle">Profile</div>
+                  <div class="quick-invite-plus" onclick="invited(this)">+</div>
+                </div>
+            </div> 
+
+          </div>
+          
+          
+    
+        </div>
+      </div>  
+
+      <div class="item4">
+        <img class="song-playing" src="Images-Home/SpotifySong.JPG">
+      </div>
+    </div>
+
+   
+
+
+    
+
+  </body>
+  
+</html>

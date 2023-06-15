@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PUI-NOTE Exercise 1</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/party.css">
+  <link rel="stylesheet" href="css/searchResults.css">
+  <script defer src="js/Party.js"></script>
+  <script defer src="js/PublicParty.js"></script>
+</head>
+<body>
+
+  
+<div class="grid-container-party" id="grid-party">
+
+  <div class="item1-party"  style="background-color:rgba(254,193,14,255)">
+    <div class="top-bar-flex-party">
+
+      <div class="toggles">
+        <a href = "./index.html">
+            <img class="toggle" src="Images-Home/highlightedToggle.png">
+        </a>
+            <img class="toggle" src="Images-Home/unhilightedToggle.png">
+      </div>
+
+      <p class ="header-title">Pittsburgh DIY</p>
+  
+      <div class="top-bar-right-flex">
+        <div>
+          <img class="account" src="Images-Home/controls (3).png">
+        </div>
+        <div>
+          <img class="screen-UI" src="Images-Home/screenUI.JPG">
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="item2-party">
+    <img class= "menu" src="Images-Home/SpotifyMenu.JPG">
+  </div>
+  
+  <div class="item3-party" onscroll="invert(this)" id ="main">
+    
+    <div class="pitt-party-box">
+      
+      <div class="party-header">
+        <img class="party-img" src="Images-Home/Pitt.jpg">
+  
+        <div class="party-info">
+  
+          <div class="party-small">LISTENING PARTY</div>
+          <div class="party-title">Pittsburgh DIY</div>
+  
+          <div class="party-members">
+            <div class="party-member">
+                <img class="host-img" src="Images-ActivateParty/Frederick.png">
+                <div>MrPGH</div>
+                <div class="host-text">HOST</div>
+            </div>
+
+          </div>
+  
+        </div>
+      </div>
+    </div>
+      
+              
+    <div class="content-party" style="background-image:linear-gradient(black,rgba(18,18,18,255), rgba(18,18,18,255), rgba(18,18,18,255), rgba(18,18,18,255), rgba(18,18,18,255));">
+  
+        <div class = "actions">
+          <img class="action" src="Images-Party/heart.png">
+          <img class= "action" src="Images-Party/download.png">
+          <div class="dropdown" onclick="dropdown()">
+            <img class="action" src="Images-Party/more.png">
+            <div class="dropdown-options"  id="dropdown">
+              <div class="dropdown-option">View past parties</div>
+              <a href="./index.html">
+                <div class="dropdown-option">Leave Party</div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+          <div class="search-interface">
+
+            <div class="queue-header">
+              <p>Search for something to queue</p>
+              <img class="search-song" onclick="closeSearch()" src="Images-NewParty/close.png">
+            </div>
+
+            <div class="search-box" id = "search-box">
+              <img class="search" onclick="closeSearch()" src="Images-Party/search.png">
+              <div class="search-entry">Search music...</div>
+            </div> 
+          </div>
+
+          <div class="music">
+
+            <div class="queue-header">
+              <p>Queue</p>
+              <img onclick = "search()" id="add-song" class="search-song" src="Images-Party/addsong.png">
+            </div>
+
+            <div class="music-header">
+              <p class="number">#</p>
+              <div class="title-header">TITLE</div>
+              <div class="album-header">ALBUM</div>
+              <div class="who-added-header">ADDED BY</div>
+              <img class="time" src="Images-Party/time.png">
+            </div>
+  
+            <hr class="header-line">
+
+            <template id="song-entry">
+
+              <div class="song">
+                <div class="song-number" id = "song-number"></div>
+                <div class="song-title">
+                  <img class="song-img" src="Images-Party/Sunrise.jpg">
+                  <div class="song-info">
+                    <div id = "song-name"></div>
+                    <div class="artist"></div>
+                  </div>
+                </div>
+                <div class="album"></div>
+                <div class="who-added-flex">
+                  <img class="who-added" src="Images-Party/ahmed.png">
+                </div>
+                <div class="song-time"></div>
+              </div>
+
+            </template>
+  
+            <div class="queue-section" id = "next-up">
+              <div class="queue-section-header">
+                <p class="queue-section-title">Next up:</p>
+                <p class="see-all">See all</p>
+              </div>
+            </div>
+  
+            <div class="queue-section" id = "prev-played">
+              
+              <div class="queue-section-header">
+                <p class="queue-section-title">Previously Played:</p>
+                <p class="see-all">See all</p>
+              </div>
+
+            </div>
+
+            <template id="rec-song-entry">
+
+              <div class="song">
+                <div class="song-number" id = "rec-song-number"></div>
+                <div class="song-title" id = "rec-song-title" >
+                  <img class="song-img" id = "rec-song-img" src="">
+                  <div class="song-info">
+                    <div id = "rec-song-name"></div>
+                    <div class="artist" id = "rec-song-artist" ></div>
+                  </div>
+                </div>
+                <div class="album" id = "rec-song-album" ></div>
+                <div class="who-added-flex">
+                  <img class="who-added" id = "rec-song-who-added" src="">
+                  <img class="who-added" id = "rec-song-who-added-two" src="">
+                  <img class="who-added" id = "rec-song-who-added-three" src="">
+                </div>
+                <button class="add-song" onclick="songAdded(this)">+</button>
+              </div>
+
+            </template>
+  
+            <div class="queue-section" id = "recommended">
+
+              <div class="queue-section-header">
+                <p class="queue-header">Recommended</p>
+                <p class="see-all" style="color:white">Refresh</p>
+              </div>
+            </div>
+
+          </div>
+      
+    </div>
+
+  </div>
+
+  <div class="item4-party" id="chat">
+
+   
+      <div class="chat-top-box">
+        <div>
+          <img class="screen-UI-chat" src="Images-Home/screenUI.JPG">
+        </div>
+        <div class="chat-title">
+          <p>Chat</p>
+          <img class="chevron" onclick = "nochat()" src="Images-Party/chevron.png">
+        </div>
+      </div>
+
+      
+      <div class="send-message">
+        <div class="type-box">Type a message...</div>
+        <div>
+          <img class="chat-controls" src="Images-Party/chatControls.png">
+        </div>
+      </div>
+   
+
+    
+    <div class="chat">
+
+      <div class="message">
+        <img class="chat-profile" src="Images-PublicParty/hannah.png">
+        <div class="text-box">The best scene in the world!</div>
+      </div>
+
+      <div class="message">
+        <img class="chat-profile" src="Images-PublicParty/ameer.png">
+        <div class="text-box">YESSS love PGH</div>
+      </div>
+
+      <div class="message">
+        <img class="chat-profile" src="Images-ActivateParty/Frederick.png">
+        <div class="text-box">It's changed so much since I grew up there</div>
+      </div>
+
+      <div class="message">
+        <img class="chat-profile" src="Images-PublicParty/hannah.png">
+        <div class="text-box">Same here - I still remember those times in the 90s! Much different city.</div>
+      </div>
+
+      <div class="message">
+        <img class="chat-profile" src="Images-PublicParty/isaiah.png">
+        <div class="text-box">This band is pretty big in the scene right now -</div>
+      </div>
+
+      <div class="queued-chat">
+        <img class="chat-profile" src="Images-PublicParty/isaiah.png">
+        <div>
+          <span class="queued-chat-name">Queued</span> <span class="queued-chat-song">Carol - Merce Lemon</span> 
+        </div>
+      </div>
+
+      <div class="message">
+        <img class="chat-profile" src="Images-PublicParty/penelope.png">
+        <div class="text-box">Ohhhh yes I've been hearing lots of buzz about them</div>
+      </div>
+
+      <div class="message">
+        <img class="chat-profile" src="Images-PublicParty/Rashad.png">
+        <div class="text-box">Reminds me of high school :)</div>
+      </div>
+
+      <div class="message">
+        <img class="chat-profile" src="Images-PublicParty/Sarah.png">
+        <div class="text-box">Who's everyones favorite band from here right now?</div>
+      </div>
+
+      <div class="message">
+        <img class="chat-profile" src="Images-PublicParty/Sarah.png">
+        <div class="pitt-prompt">
+          <div class="prompt-header">
+            <img class="prompt-img" src="Images-PublicParty/pitt-prompt.png">
+            <div>Prompt</div>
+          </div>
+          <div class="prompt-text">"Queue your current favorite PGH band"</div>
+        </div>
+      </div>
+
+      <div class="pitt-prompt-line">
+        <div class="prompt-responses">
+
+          <div class="queued-chat">
+            <img class="chat-profile" src="Images-PublicParty/michele.png">
+            <div>
+              <span class="queued-chat-name">Queued</span> <span class="queued-chat-song">Picture - feeble little horse</span> 
+            </div>
+          </div>
+
+          <div class="queued-chat">
+            <img class="chat-profile" src="Images-PublicParty/Royal.png">
+            <div>
+              <span class="queued-chat-name">Queued</span> <span class="queued-chat-song">Don't Start a Band - Short Fictions</span> 
+            </div>
+          </div>
+
+          <div class="queued-chat">
+            <img class="chat-profile" src="Images-PublicParty/spencer.png">
+            <div>
+              <span class="queued-chat-name">Queued</span> <span class="queued-chat-song">The Press Corpse - Anti-Flag</span> 
+            </div>
+          </div>
+
+        </div>
+      </div>
+    
+    </div>
+
+  </div>
+
+  <div class="chat-preview">
+    <div class="chat-title">
+      <div>Chat</div>
+        <img class="chevron-no-chat" onclick = "showChat()" src="Images-Party/chevron.png" >
+    </div>
+  </div>
+
+
+  <div class="item5-party">
+    <img class= "song-playing" src="Images-Home/SpotifySong.JPG">
+  </div>
+   
+
+
+
+</body>
+</html>

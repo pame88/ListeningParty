@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+
+  <head>
+    <title>PUI-NOTE Exercise 1</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/newParty.css">
+    <script defer src="js/ActivateParty.js"></script>
+  </head>
+
+
+  <body>
+    
+    <div class="grid-container">
+
+      <div class="item1">
+        <div class="top-bar-flex">
+          <div class="toggles">
+            <a href = "./index.html">
+                <img class="toggle" src="Images-Home/highlightedToggle.png">
+            </a>
+                <img class="toggle" src="Images-Home/unhilightedToggle.png">
+          </div>
+      
+          <div class="top-bar-right-flex">
+            <div>
+              <img class="account" src="Images-Home/controls (3).png">
+            </div>
+            <div>
+              <img class="screen-UI" src="Images-Home/screenUI.JPG">
+            </div>
+          </div>
+        </div>
+      </div>
+     
+      <div class="item2">
+        <img class= "menu" src="Images-Home/SpotifyMenu.JPG">
+      </div>
+
+      <div class="item3">
+        <div class="new-party-box">
+
+          <div class="party-header">
+            <img class="party-img" src="Images-Home/BingoNight.png">
+    
+            <div class="party-info">
+    
+              <p class="party-small">LISTENING PARTY</p>
+              <div class="party-title">Bingo Night</div>
+              <button class="create-party-button">Activate Party</button>
+    
+            </div>
+          </div>
+
+        </div>
+
+        <div class="content-new-party">
+
+          <div class="quick-invite-header">
+            <p>Members</p>
+            <img class="show-all" src="Images-Home/ShowAll.png">
+          </div>
+    
+           
+          <div class = "theme-section" id ="member-section">
+
+            <template id="member-entry">
+              <div class="quick-invite">
+                <img class="quick-invite-img" src="Images-ActivateParty/David.png" >
+                <div class="quick-invite-name">David</div>
+                <div class="quick-invite-info">
+                  <div class="quick-invite-subtitle">Profile</div>
+                  <div class="quick-invite-remove">REMOVE</div>
+                </div>
+            </template>
+
+          </div>
+
+          <div class="quick-invite-header">
+            <p>Quick Invite</p>
+            <img class="show-all" src="Images-Home/ShowAll.png">
+          </div>
+
+             
+          <div class = "theme-section" id ="friend-section">
+
+            <template id="friend-entry">
+              <div class="quick-invite">
+                <img class="quick-invite-img" src="Images-ActivateParty/David.png" >
+                <div class="quick-invite-name">David</div>
+                <div class="quick-invite-info">
+                  <div class="quick-invite-subtitle">Profile</div>
+                  <div class="quick-invite-plus">+</div>
+                </div>
+            </template>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="item4">
+        <img class="song-playing" src="Images-Home/SpotifySong.JPG">
+      </div>
+    </div> 
+  
+
+
+  </body>
+  
+</html>
